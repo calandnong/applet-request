@@ -1,7 +1,4 @@
-import { log } from './log';
-
-export const getTest = () => {
-  log('test');
-};
-
-export {};
+export * from './merge-config';
+export * from './http-code';
+export * from './url';
+export * from './exception';

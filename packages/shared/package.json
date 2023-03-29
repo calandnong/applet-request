@@ -8,5 +8,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "deepmerge": "^4.3.1",
+    "qs": "^6.11.1"
+  }
 }

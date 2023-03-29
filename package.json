@@ -4,6 +4,9 @@
   "description": "#### Description uniapp下的request封装",
   "main": "index.js",
   "scripts": {
+    "test": "vitest run",
+    "ui": "vitest --ui",
+    "coverage": "vitest run --coverage",
     "add:husky-lint-staged": "husky add .husky/pre-commit 'npm run lint-staged'",
     "add:husky-commitlint": "husky add .husky/commit-msg 'npm run commitlint'",
     "lint-staged": "lint-staged",
