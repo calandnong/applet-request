@@ -1,0 +1,27 @@
+{
+  "name": "@uni-request/eslint-config-ts",
+  "version": "0.1.0",
+  "description": "",
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/antfu/eslint-config",
+  "keywords": [
+    "eslint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint-import-resolver-typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0"
+  }
+}

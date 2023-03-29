@@ -1,0 +1,48 @@
+{
+  "name": "uni-request",
+  "version": "1.0.0",
+  "description": "#### Description uniapp下的request封装",
+  "main": "index.js",
+  "scripts": {
+    "add:husky-lint-staged": "husky add .husky/pre-commit 'npm run lint-staged'",
+    "add:husky-commitlint": "husky add .husky/commit-msg 'npm run commitlint'",
+    "lint-staged": "lint-staged",
+    "commitlint": "commitlint --config .commitlintrc.cjs --edit $1",
+    "husky:init": "npx husky-init",
+    "prepare": "husky install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/JSshuai2015/uni-request"
+  },
+  "engines": {
+    "node": ">=16.13.1",
+    "pnpm": ">=6.32.20"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@dcloudio/types": "^3.3.2",
+    "@dcloudio/uni-app": "^3.0.0-alpha-3000020210521001",
+    "@types/node": "^18.15.1",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "@uni-request/adapters": "workspace:^1.0.0",
+    "@uni-request/core": "workspace:^1.0.0",
+    "@uni-request/eslint-config-ts": "workspace:^0.1.0",
+    "@uni-request/shared": "workspace:^1.0.0",
+    "@vitest/ui": "^0.29.2",
+    "assert": "^2.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "vitest": "^0.29.2"
+  }
+}
