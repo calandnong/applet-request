@@ -4,6 +4,7 @@
   "description": "#### Description uniapp下的request封装",
   "main": "index.js",
   "scripts": {
+    "build": "tsx ./scripts/build.ts",
     "test": "vitest run",
     "ui": "vitest --ui",
     "coverage": "vitest run --coverage",
@@ -26,6 +27,10 @@
     "pnpm": ">=6.32.20"
   },
   "devDependencies": {
+    "@applet-request/adapters": "workspace:^1.0.0",
+    "@applet-request/core": "workspace:^1.0.0",
+    "@applet-request/eslint-config-ts": "workspace:^0.1.0",
+    "@applet-request/shared": "workspace:^1.0.0",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@dcloudio/types": "^3.3.2",
@@ -33,18 +38,20 @@
     "@types/node": "^18.15.1",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
-    "@applet-request/adapters": "workspace:^1.0.0",
-    "@applet-request/core": "workspace:^1.0.0",
-    "@applet-request/eslint-config-ts": "workspace:^0.1.0",
-    "@applet-request/shared": "workspace:^1.0.0",
     "@vitest/ui": "^0.29.2",
     "assert": "^2.0.0",
+    "esbuild": "^0.17.14",
     "eslint": "^8.36.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.0",
+    "rollup": "^3.20.2",
+    "rollup-plugin-dts": "^5.3.0",
+    "rollup-plugin-esbuild": "^5.0.0",
+    "rollup-plugin-pure": "^0.0.2",
     "ts-node": "^10.9.1",
+    "tsx": "^3.12.6",
     "typescript": "^4.9.5",
     "vitest": "^0.29.2"
   }
