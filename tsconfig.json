@@ -18,12 +18,12 @@
     "skipDefaultLibCheck": true,
     "noUnusedLocals": true,
     "paths": {
-      "@uni-request/core": ["./packages/core/index.ts"],
-      "@uni-request/core/*": ["./packages/core/*"],
-      "@uni-request/adaptors": ["./packages/adaptors/index.ts"],
-      "@uni-request/adaptors/*": ["./packages/adaptors/*"],
-      "@uni-request/shared": ["./packages/shared/index.ts"],
-      "@uni-request/shared/*": ["./packages/shared/*"]
+      "@applet-request/core": ["./packages/core/index.ts"],
+      "@applet-request/core/*": ["./packages/core/*"],
+      "@applet-request/adaptors": ["./packages/adaptors/index.ts"],
+      "@applet-request/adaptors/*": ["./packages/adaptors/*"],
+      "@applet-request/shared": ["./packages/shared/index.ts"],
+      "@applet-request/shared/*": ["./packages/shared/*"]
     },
     "types": [
       "@dcloudio/types",

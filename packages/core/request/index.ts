@@ -1,4 +1,4 @@
-import { getTest } from '@uni-request/shared';
+import { getTest } from '@applet-request/shared';
 
 getTest();
 
