@@ -5,6 +5,7 @@ importers:
   .:
     specifiers:
       '@applet-request/adapters': workspace:^1.0.0
+      '@applet-request/api-mock': workspace:^1.0.0
       '@applet-request/core': workspace:^1.0.0
       '@applet-request/eslint-config-ts': workspace:^0.1.0
       '@applet-request/shared': workspace:^1.0.0
@@ -33,6 +34,7 @@ importers:
       vitest: ^0.29.2
     devDependencies:
       '@applet-request/adapters': link:packages/adapters
+      '@applet-request/api-mock': link:packages/api-mock
       '@applet-request/core': link:packages/core
       '@applet-request/eslint-config-ts': link:packages/eslint-config-ts
       '@applet-request/shared': link:packages/shared

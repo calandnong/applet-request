@@ -1,0 +1,10 @@
+{
+  "name": "@applet-request/api-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "module": "index.mjs",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
