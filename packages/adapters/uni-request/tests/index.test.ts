@@ -49,7 +49,7 @@ setUniRequestConfig<Response>({
 
 describe('uni-request', () => {
   const instance = new HttpRequest(new UniRequestAdaptor());
-  test('request', async () => {
+  test('request-success', async () => {
     const res = await instance.request<CommonResponse<{}>>({
       url: 'https://www.test.com/api/getList',
       data: {
