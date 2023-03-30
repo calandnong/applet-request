@@ -49,6 +49,19 @@ setUniRequestConfig<Response>({
 
 describe('uni-request', () => {
   const instance = new HttpRequest(new UniRequestAdaptor());
+
+  instance.setDefaultConfig({
+  });
+
+  instance.use(async ({ request, response }, next) => {
+    // eslint-disable-next-line no-console
+    console.log('request.config', request);
+    await next();
+    // eslint-disable-next-line no-console
+    console.log(response);
+    response.raw;
+    response.data;
+  });
   test('request-success', async () => {
     const res = await instance.request<CommonResponse<{}>>({
       url: 'https://www.test.com/api/getList',
