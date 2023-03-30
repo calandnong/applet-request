@@ -51,6 +51,8 @@ module.exports = {
   rules: {
     // base
     'eol-last': ['error', 'always'],
+    // 'curly': ['error', 'multi-or-nest', 'consistent'],
+    'curly': 'off',
 
     // ts
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-ignore': 'allow-with-description' }],
@@ -67,7 +69,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error'],
 
     // common config
-    'curly': ['error', 'multi-or-nest', 'consistent'],
     'quotes': ['error', 'single'],
     'quote-props': ['error', 'consistent-as-needed'],
     'no-param-reassign': 'off',
