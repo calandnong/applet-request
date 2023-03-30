@@ -2,7 +2,7 @@
   "name": "@applet-request/core",
   "version": "1.0.0",
   "description": "",
-  "main": "./index.cjs",
+  "main": "./index.js",
   "module": "./index.mjs",
   "types": "./index.d.ts",
   "keywords": [],
