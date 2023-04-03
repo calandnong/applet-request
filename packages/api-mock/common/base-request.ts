@@ -69,6 +69,7 @@ export const useBaseRequest = <Request, Response = unknown>() => {
   };
 
   return {
+    requestMap,
     baseRequest,
     setConfig,
   };

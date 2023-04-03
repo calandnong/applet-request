@@ -54,13 +54,9 @@ describe('uni-request', () => {
   });
 
   instance.use(async ({ request, response }, next) => {
-    // eslint-disable-next-line no-console
     console.log('request.config', request);
     await next();
-    // eslint-disable-next-line no-console
     console.log(response);
-    response.raw;
-    response.data;
   });
   test('request-success', async () => {
     const res = await instance.request<CommonResponse<{}>>({
