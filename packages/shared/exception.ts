@@ -1,3 +1,7 @@
+interface ErrorOptions {
+  cause?: unknown;
+}
+
 /**
  * 请求的基础异常
  */

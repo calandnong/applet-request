@@ -1,4 +1,4 @@
-import { getGlobalProperty, setGlobalProperty } from '@applet-request/api-mock';
+import { getGlobalProperty, setGlobalProperty } from '../../index';
 
 /**
  * uniapp的api的环境key

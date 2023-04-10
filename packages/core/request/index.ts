@@ -108,7 +108,7 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
    * @param options 
    * @returns 
    */
-  private createContext<Response>(options: RequestConfig<Config>): RequestContext<Config, CommonResponse & Response, RawResponse> {
+  private createContext<Response>(options: RequestConfig<Config>): RequestContext<Config, CommonResponse & Response, RawResponse, HttpRequest<Config, CommonResponse & Response, RawResponse>> {
     return {
       requestInstance: this as HttpRequest<Config, CommonResponse & Response, RawResponse>,
       options: JSON.parse(JSON.stringify(options)),

@@ -1,5 +1,5 @@
 import { setUniPropertyOfGlobal } from './../common/index';
-import { useBaseRequest } from '@applet-request/api-mock';
+import { useBaseRequest } from '../../common';
 
 const { setConfig: setUniRequestConfig, baseRequest } = useBaseRequest<UniApp.RequestOptions, UniApp.RequestSuccessCallbackResult>();
 

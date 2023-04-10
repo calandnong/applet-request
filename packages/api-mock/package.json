@@ -2,8 +2,9 @@
   "name": "@applet-request/api-mock",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "module": "index.mjs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "keywords": [],
   "author": "",
   "license": "ISC"

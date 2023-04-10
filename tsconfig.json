@@ -27,6 +27,7 @@
     },
     "types": [
       "@dcloudio/types",
+      "@types/node"
     ]
   },
   "include": [
