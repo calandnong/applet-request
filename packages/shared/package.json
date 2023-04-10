@@ -1,6 +1,6 @@
 {
   "name": "@applet-request/shared",
-  "version": "2.0.0",
+  "version": "0.1.0-beta",
   "description": "",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
