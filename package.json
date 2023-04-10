@@ -14,7 +14,12 @@
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --config .commitlintrc.cjs --edit $1",
     "husky:init": "npx husky-init",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "turbo run dev --parallel",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish",
+    "release": "pnpm run build && pnpm run changeset && pnpm run changeset:version && pnpm run changeset:publish"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +39,7 @@
     "@applet-request/eslint-config-ts": "workspace:^0.1.0",
     "@applet-request/meta-data": "workspace:^1.0.0",
     "@applet-request/shared": "workspace:^1.0.0",
+    "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@dcloudio/types": "^3.3.2",
