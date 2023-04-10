@@ -49,6 +49,15 @@ setUniRequestConfig<Response>({
 
 describe('uni-request', () => {
   const instance = new HttpRequest(new UniRequestAdaptor());
+
+  instance.setDefaultConfig({
+  });
+
+  instance.use(async ({ request, response }, next) => {
+    console.log('request.config', request);
+    await next();
+    console.log(response);
+  });
   test('request-success', async () => {
     const res = await instance.request<CommonResponse<{}>>({
       url: 'https://www.test.com/api/getList',

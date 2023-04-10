@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsx ./scripts/build.ts",
+    "build:rollup": "rollup -c",
     "test": "vitest run",
     "ui": "vitest --ui",
     "coverage": "vitest run --coverage",
@@ -20,7 +21,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/JSshuai2015/uni-request"
+    "url": "https://github.com/callmecalcal/applet-request"
   },
   "engines": {
     "node": ">=16.13.1",
@@ -31,20 +32,25 @@
     "@applet-request/api-mock": "workspace:^1.0.0",
     "@applet-request/core": "workspace:^1.0.0",
     "@applet-request/eslint-config-ts": "workspace:^0.1.0",
+    "@applet-request/meta-data": "workspace:^1.0.0",
     "@applet-request/shared": "workspace:^1.0.0",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@dcloudio/types": "^3.3.2",
     "@dcloudio/uni-app": "^3.0.0-alpha-3000020210521001",
-    "@types/node": "^18.15.1",
+    "@types/node": "^18.15.11",
+    "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@typescript-eslint/parser": "^5.57.0",
     "@vitest/ui": "^0.29.2",
     "assert": "^2.0.0",
+    "consola": "^2.15.3",
     "esbuild": "^0.17.14",
+    "esbuild-register": "^3.4.2",
     "eslint": "^8.36.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.27.5",
+    "fast-glob": "^3.2.12",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.0",
     "rollup": "^3.20.2",

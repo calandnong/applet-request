@@ -1,4 +1,3 @@
-import type { HttpRequest } from '..';
 import { RequestParams } from '@applet-request/shared';
 
 export {
@@ -58,11 +57,11 @@ export interface Response<Data = unknown, RawResponse = unknown> {
 /**
  * 中间件上下文
  */
-export interface RequestContext<Config = unknown, Data = unknown, RawResponse = unknown> {
+export interface RequestContext<Config = unknown, Data = unknown, RawResponse = unknown, Instance = unknown> {
   /**
    * 请求实例
    */
-  requestInstance: HttpRequest<Config, Data, RawResponse>;
+  requestInstance: Instance;
   /**
    * 请求实例.request方法传入的初始配置
    */

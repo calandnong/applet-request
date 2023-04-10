@@ -8,20 +8,25 @@ importers:
       '@applet-request/api-mock': workspace:^1.0.0
       '@applet-request/core': workspace:^1.0.0
       '@applet-request/eslint-config-ts': workspace:^0.1.0
+      '@applet-request/meta-data': workspace:^1.0.0
       '@applet-request/shared': workspace:^1.0.0
       '@commitlint/cli': ^17.5.1
       '@commitlint/config-conventional': ^17.4.4
       '@dcloudio/types': ^3.3.2
       '@dcloudio/uni-app': ^3.0.0-alpha-3000020210521001
-      '@types/node': ^18.15.1
+      '@types/node': ^18.15.11
+      '@types/qs': ^6.9.7
       '@typescript-eslint/eslint-plugin': ^5.57.0
       '@typescript-eslint/parser': ^5.57.0
       '@vitest/ui': ^0.29.2
       assert: ^2.0.0
+      consola: ^2.15.3
       esbuild: ^0.17.14
+      esbuild-register: ^3.4.2
       eslint: ^8.36.0
       eslint-config-airbnb-base: ^15.0.0
       eslint-plugin-import: ^2.27.5
+      fast-glob: ^3.2.12
       husky: ^8.0.0
       lint-staged: ^13.2.0
       rollup: ^3.20.2
@@ -37,20 +42,25 @@ importers:
       '@applet-request/api-mock': link:packages/api-mock
       '@applet-request/core': link:packages/core
       '@applet-request/eslint-config-ts': link:packages/eslint-config-ts
+      '@applet-request/meta-data': link:packages/meta-data
       '@applet-request/shared': link:packages/shared
       '@commitlint/cli': 17.5.1
       '@commitlint/config-conventional': 17.4.4
       '@dcloudio/types': 3.3.2
       '@dcloudio/uni-app': 3.0.0-alpha-3000020210521001
       '@types/node': 18.15.11
+      '@types/qs': 6.9.7
       '@typescript-eslint/eslint-plugin': 5.57.0_bf234099016d3f44c24f2c0643bb9845
       '@typescript-eslint/parser': 5.57.0_eslint@8.37.0+typescript@4.9.5
       '@vitest/ui': 0.29.8
       assert: 2.0.0
+      consola: 2.15.3
       esbuild: 0.17.14
+      esbuild-register: 3.4.2_esbuild@0.17.14
       eslint: 8.37.0
       eslint-config-airbnb-base: 15.0.0_88672e599be4c3bbfdd613ffff9385e6
       eslint-plugin-import: 2.27.5_d35161ea90513497b5c768db6aad7153
+      fast-glob: 3.2.12
       husky: 8.0.3
       lint-staged: 13.2.0
       rollup: 3.20.2
@@ -677,6 +687,10 @@ packages:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
     dev: true
 
+  /@types/qs/6.9.7:
+    resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
+    dev: true
+
   /@types/semver/7.3.13:
     resolution: {integrity: sha512-21cFJr9z3g5dW8B0CVI9g2O9beqaThGQ6ZFBqHfwhzLDKUxaqTIy3vnfah/UPkfOiF2pLq+tGz+W8RyCskuslw==}
 
@@ -1173,6 +1187,10 @@ packages:
     resolution: {integrity: sha512-JsPKdmh8ZkmnHxDk55FZ1TqVLvEQTvoByJZRN9jzI0UjxK/QgAmsphz7PGtqgPieQZ/CQcHWXCR7ATDNhGe+YA==}
     dev: true
 
+  /consola/2.15.3:
+    resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
+    dev: true
+
   /conventional-changelog-angular/5.0.13:
     resolution: {integrity: sha512-i/gipMxs7s8L/QeuavPF2hLnJgH6pEZAttySB6aiQLWcX3puWDL3ACVmvBhJGxnAy52Qc15ua26BufY6KpmrVA==}
     engines: {node: '>=10'}
@@ -1433,6 +1451,17 @@ packages:
 
   /es6-object-assign/1.1.0:
     resolution: {integrity: sha1-wsNYJlYkfDnqEHyx5mUrb58kUjw=}
+    dev: true
+
+  /esbuild-register/3.4.2_esbuild@0.17.14:
+    resolution: {integrity: sha512-kG/XyTDyz6+YDuyfB9ZoSIOOmgyFCH+xPRtsCa8W85HLRV5Csp+o3jWVbOSHgSLfyLc5DmP+KFDNwty4mEjC+Q==}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
+    dependencies:
+      debug: 4.3.4
+      esbuild: 0.17.14
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /esbuild/0.17.14:
