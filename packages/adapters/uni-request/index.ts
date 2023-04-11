@@ -20,7 +20,7 @@ UniApp.RequestSuccessCallbackResult
       uni.request({
         ...context.request.config,
         url: context.request.apiURL,
-        data: context.request.data,
+        data: context.request.data as (string | AnyObject | ArrayBuffer | undefined),
         success(res) {
           context.response.data = res.data as Data;
           context.response.raw = res;
