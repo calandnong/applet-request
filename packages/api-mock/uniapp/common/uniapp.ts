@@ -1,4 +1,4 @@
-import { getGlobalProperty, setGlobalProperty } from '../../index';
+import { getGlobalProperty, setGlobalProperty } from '../../common/index';
 
 /**
  * uniapp的api的环境key

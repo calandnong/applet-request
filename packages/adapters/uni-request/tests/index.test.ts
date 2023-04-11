@@ -1,7 +1,7 @@
 import { describe, test, expect } from 'vitest';
 import { setUniRequestConfig } from '@applet-request/api-mock';
 import { HttpRequest } from '@applet-request/core';
-import { UniRequestAdaptor } from '..';
+import { UniRequestAdapter } from '..';
 
 interface CommonResponse<Data = unknown> {
   code: number;
@@ -48,7 +48,7 @@ setUniRequestConfig<Response>({
 });
 
 describe('uni-request', () => {
-  const instance = new HttpRequest(new UniRequestAdaptor());
+  const instance = new HttpRequest(new UniRequestAdapter());
 
   instance.setDefaultConfig({
   });

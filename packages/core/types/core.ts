@@ -1,6 +1,6 @@
-import { RequestParams } from '@applet-request/shared';
+import type { RequestParams } from '@applet-request/shared';
 
-export {
+export type {
   RequestParams,
 };
 

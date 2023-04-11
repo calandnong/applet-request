@@ -1,4 +1,4 @@
-import { Adaptor } from '@applet-request/core';
+import { Adapter } from '@applet-request/core';
 import type { 
   RequestContext,
   MiddlewareNext,
@@ -6,7 +6,7 @@ import type {
 
 export type UniRequestConfig = Omit<UniApp.RequestOptions, 'url' | 'data' | 'fail' | 'success' | 'complete'>;
 
-export class UniRequestAdaptor<Data> extends Adaptor<
+export class UniRequestAdapter<Data> extends Adapter<
 UniRequestConfig,
 Data,
 UniApp.RequestSuccessCallbackResult

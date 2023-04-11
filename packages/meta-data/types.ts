@@ -15,7 +15,7 @@ export interface PackageManifest {
    */
   description?: string;
   /**
-   * 第三方依赖
+   * 是否将第三方依赖external
    */
   external?: string[];
   /**
@@ -30,4 +30,12 @@ export interface PackageManifest {
    * 是否打包.d.ts
    */
   dts?: boolean;
+  /**
+   * 是否需要打包第三方依赖
+   */
+  resolve?: boolean;
+  /**
+   * 是否浏览器环境使用
+   */
+  browser?: boolean;
 }

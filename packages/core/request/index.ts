@@ -1,13 +1,13 @@
 import { buildFullPath, buildURL, mergeConfig, BaseException } from '@applet-request/shared';
 import type { 
   Middleware, 
-  Adaptor,
+  Adapter,
   RequestContext, 
   TransformRequestConfig, 
   RequestDefaultConfig,
   RequestConfig,
 } from '..';
-import { compose } from '..';
+import { compose } from '../compose/index';
 
 /**
  * 网络请求类
@@ -29,9 +29,9 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
 
   /**
    * 网络请求类
-   * @param adaptor 适配器
+   * @param adapter 适配器
    */
-  constructor(private adaptor: Adaptor<Config, CommonResponse, RawResponse>) {
+  constructor(private adapter: Adapter<Config, CommonResponse, RawResponse>) {
   }
 
   /**
@@ -69,11 +69,11 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
     const request = compose(this.middleware);
     const context = this.createContext<Response>(options);
     return request(context, (context, next) => {
-      return this.adaptor.request(context, next);
+      return this.adapter.request(context, next);
     }).then(() => {
-      if (!context.response.data) 
-        return Promise.reject(new BaseException('context.response.data is undefined, you need to set this data in adaptor!'));
-      
+      if (!context.response.data) {
+        return Promise.reject(new BaseException('Response data is empty!'));
+      }
       return context.response.data;
     });
   }

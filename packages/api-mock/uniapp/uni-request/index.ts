@@ -1,5 +1,5 @@
 import { setUniPropertyOfGlobal } from './../common/index';
-import { useBaseRequest } from '../../common';
+import { useBaseRequest } from '../../common/index';
 
 const { setConfig: setUniRequestConfig, baseRequest } = useBaseRequest<UniApp.RequestOptions, UniApp.RequestSuccessCallbackResult>();
 
