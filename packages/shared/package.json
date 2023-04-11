@@ -14,7 +14,7 @@
     "./*": "./*"
   },
   "keywords": [],
-  "author": "",
+  "author": "coder_pig",
   "license": "MIT",
   "dependencies": {
     "deepmerge": "^4.3.1",

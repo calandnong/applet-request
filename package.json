@@ -1,5 +1,6 @@
 {
   "name": "@applet-request/monorepo",
+  "private": true,
   "version": "0.1.0-beta",
   "description": "#### Description uniapp下的request封装",
   "main": "index.js",
@@ -18,7 +19,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm run build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/ --access public"
   },
   "keywords": [],
   "author": "",
