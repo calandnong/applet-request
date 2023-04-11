@@ -1,0 +1,15 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@applet-request/adapters": "0.1.1",
+    "@applet-request/api-mock": "1.0.2",
+    "@applet-request/core": "0.1.1",
+    "@applet-request/eslint-config-ts": "0.1.1",
+    "@applet-request/meta-data": "0.1.2",
+    "@applet-request/shared": "0.1.1"
+  },
+  "changesets": [
+    "violet-steaks-roll"
+  ]
+}

@@ -1,5 +1,11 @@
 # @applet-request/eslint-config-ts
 
+## 0.1.2-beta.0
+
+### Patch Changes
+
+- feat: 进入 beta
+
 ## 0.1.1
 
 ### Patch Changes
