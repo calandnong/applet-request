@@ -82,7 +82,10 @@ importers:
     specifiers: {}
 
   packages/core:
-    specifiers: {}
+    specifiers:
+      '@applet-request/shared': workspace:^0.1.0
+    dependencies:
+      '@applet-request/shared': link:../shared
 
   packages/eslint-config-ts:
     specifiers:

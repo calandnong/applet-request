@@ -15,5 +15,8 @@
   },
   "keywords": [],
   "author": "coder_pig",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@applet-request/shared": "workspace:^0.1.0"
+  }
 }
