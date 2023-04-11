@@ -1,8 +1,8 @@
 {
   "name": "@applet-request/meta-data",
+  "private": true,
   "version": "0.1.1",
   "description": "",
-  "main": "index.js",
   "scripts": {},
   "keywords": [],
   "author": "coder_pig",
