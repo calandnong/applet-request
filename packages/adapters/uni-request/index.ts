@@ -6,6 +6,9 @@ import type {
 
 export type UniRequestConfig = Omit<UniApp.RequestOptions, 'url' | 'data' | 'fail' | 'success' | 'complete'>;
 
+/**
+ * uni.request的请求适配器
+ */
 export class UniRequestAdapter<Data> extends Adapter<
 UniRequestConfig,
 Data,
