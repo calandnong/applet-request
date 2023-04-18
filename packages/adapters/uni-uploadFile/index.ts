@@ -21,11 +21,11 @@ export class UniUploadFileAdaptor<Data> extends Adapter<
 > {
   async request(
     context: RequestContext<
-      UniUploadFileOtherConfig, 
-      Data, 
+      UniUploadFileOtherConfig,
+      Data,
       UniApp.UploadFileSuccessCallbackResult
-    >, 
-    next: MiddlewareNext
+    >,
+    next: MiddlewareNext,
   ) {
     await next();
     return new Promise((resolve, reject) => {

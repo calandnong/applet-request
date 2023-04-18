@@ -1,5 +1,5 @@
-import { setUniPropertyOfGlobal } from './../common/index';
 import { useBaseRequest } from '../../common/index';
+import { setUniPropertyOfGlobal } from './../common/index';
 
 const { setConfig: setUniRequestConfig, baseRequest } = useBaseRequest<UniApp.RequestOptions, UniApp.RequestSuccessCallbackResult>();
 
@@ -17,9 +17,9 @@ const uniRequest: UniNamespace.Uni['request'] = (options: UniApp.RequestOptions)
   });
   return {
     abort() {
-    }, 
+    },
     onHeadersReceived() {
-    }, 
+    },
     offHeadersReceived() {
     },
   };
@@ -30,5 +30,3 @@ setUniPropertyOfGlobal('request', uniRequest);
 export {
   setUniRequestConfig,
 };
-
-

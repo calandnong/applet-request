@@ -1,4 +1,5 @@
 import { describe, test, expect } from 'vitest';
+import consola from 'consola';
 import { setUniRequestConfig } from '../..';
 
 describe('api-mock:uni-request', () => {
@@ -7,7 +8,7 @@ describe('api-mock:uni-request', () => {
       'www.baidu.com': {
         isSuccess: true,
         getData(request) {
-          console.log(request);
+          consola.log(request);
           return {
             statusCode: 200,
             data: {},
@@ -20,7 +21,7 @@ describe('api-mock:uni-request', () => {
     uni.request({
       url: 'www.baidu.com',
       success(result) {
-        console.log('result', result);
+        consola.log('result', result);
         expect(result.statusCode).toBe(200);
       },
     });

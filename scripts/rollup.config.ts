@@ -3,7 +3,7 @@ import esbuild from 'rollup-plugin-esbuild';
 import dts from 'rollup-plugin-dts';
 import { PACKAGES } from '@applet-request/meta-data';
 import consola from 'consola';
-import nodeResolve from '@rollup/plugin-node-resolve';
+import NodeResolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 
 /**
@@ -56,24 +56,23 @@ for (const { name, cjs, mjs, dts, external, resolve, browser } of PACKAGES) {
   // 是否打包cjs
   if (cjs !== false) {
     output.push({
-      file: `${packageName}/dist/index.cjs`, 
+      file: `${packageName}/dist/index.cjs`,
       format: 'cjs',
     });
   }
   consola.info(external);
-  
 
   // 是否打包mjs
   if (mjs !== false) {
     output.push({
-      file: `${packageName}/dist/index.mjs`, 
+      file: `${packageName}/dist/index.mjs`,
       format: 'es',
     });
   }
 
   if (resolve) {
     plugin.push(commonjs());
-    plugin.push(nodeResolve({
+    plugin.push(NodeResolve({
       browser: Boolean(browser),
       preferBuiltins: false,
     }));

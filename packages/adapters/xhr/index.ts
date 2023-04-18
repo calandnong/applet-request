@@ -42,20 +42,20 @@ XHROtherConfig,
 > {
   async request(
     context: RequestContext<
-      XHROtherConfig, 
-      Data, 
+      XHROtherConfig,
+      Data,
       XHRResponse<Data>
-    >, 
-    next: MiddlewareNext
+    >,
+    next: MiddlewareNext,
   ) {
     await next();
     return new Promise((resolve, reject) => {
-      const { 
-        apiURL, 
-        config = {}, 
+      const {
+        apiURL,
+        config = {},
         data,
       } = context.request;
-      const { 
+      const {
         responseType,
         timeout,
         withCredentials,
@@ -71,11 +71,11 @@ XHROtherConfig,
         if (responseType) {
           xhr.responseType = responseType;
         }
-  
+
         if (timeout) {
           xhr.timeout = timeout;
         }
-  
+
         if (withCredentials) {
           xhr.withCredentials = withCredentials;
         }
@@ -86,7 +86,7 @@ XHROtherConfig,
         if (!headers) {
           return parsed;
         }
-      
+
         headers.split('\r\n').forEach((line) => {
           let [key, ...vals] = line.split(':');
           key = key.trim().toLowerCase();
@@ -96,7 +96,7 @@ XHROtherConfig,
           const val = vals.join(':').trim();
           parsed[key] = val;
         });
-      
+
         return parsed;
       }
 
@@ -112,7 +112,7 @@ XHROtherConfig,
           }
           return data;
         }
-        
+
         if (isHttpSuccess(xhr.status)) {
           response.data = transformResponse(response.data) as Data;
           context.response.data = response.data;
@@ -129,11 +129,11 @@ XHROtherConfig,
           if (xhr.readyState !== 4) {
             return;
           }
-  
+
           if (xhr.status === 0) {
             return;
           }
-  
+
           const responseHeaders = parseHeaders(xhr.getAllResponseHeaders());
           const responseData
             = responseType && responseType !== 'text' ? xhr.response : xhr.responseText;
@@ -147,14 +147,14 @@ XHROtherConfig,
           };
           handleResponse(response);
         };
-  
+
         xhr.onerror = function handleError() {
           reject(new BaseException('Network Error', context));
         };
-  
+
         xhr.ontimeout = function handleTimeout() {
           reject(
-            new BaseException(`Timeout of ${config.timeout} ms exceeded`)
+            new BaseException(`Timeout of ${config.timeout} ms exceeded`),
           );
         };
       }
@@ -178,7 +178,7 @@ XHROtherConfig,
           host,
         };
       }
-      
+
       function isURLSameOrigin(requestURL: string): boolean {
         const currentOrigin = resolveURL(window.location.href);
         const parsedOrigin = resolveURL(requestURL);
@@ -186,13 +186,12 @@ XHROtherConfig,
           parsedOrigin.protocol === currentOrigin.protocol && parsedOrigin.host === currentOrigin.host
         );
       }
-      
 
       function processHeaders(): void {
         if (isFormData(data)) {
           delete header['Content-Type'];
         }
-  
+
         if ((withCredentials || isURLSameOrigin(apiURL)) && xsrfCookieName) {
           const cookie = {
             read(name: string): string | null {
@@ -205,11 +204,11 @@ XHROtherConfig,
             header[xsrfHeaderName] = xsrfValue;
           }
         }
-  
+
         if (auth) {
-          header['Authorization'] = `Basic ${btoa(`${auth.username}:${auth.password}`)}`;
+          header.Authorization = `Basic ${btoa(`${auth.username}:${auth.password}`)}`;
         }
-  
+
         Object.keys(header).forEach((name) => {
           if (data === null && name.toLowerCase() === 'content-type') {
             delete header[name];
@@ -219,12 +218,11 @@ XHROtherConfig,
           }
         });
       }
-  
 
       // 打开链接,对应参数: "请求类型","请求url"，“是否异步处理”
       xhr.open((config?.method || 'GET').toUpperCase(), apiURL, true);
 
-      // 
+      //
       configureRequest();
 
       // 监听回调
@@ -235,5 +233,5 @@ XHROtherConfig,
 
       xhr.send(data as Document | XMLHttpRequestBodyInit | null | undefined);
     });
-  }  
+  }
 }

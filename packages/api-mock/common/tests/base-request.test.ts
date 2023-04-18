@@ -1,5 +1,6 @@
 import { describe, test, expect } from 'vitest';
 import { useBaseRequest } from '@applet-request/api-mock';
+import consola from 'consola';
 
 describe('api-mock:useBaseRequest', () => {
   const { requestMap, setConfig, baseRequest } = useBaseRequest<{
@@ -19,7 +20,7 @@ describe('api-mock:useBaseRequest', () => {
     };
     setConfig({
       'https://www.test.com/getName': request,
-        
+
     });
     expect(requestMap.get('https://www.test.com/getName')).toEqual(request);
   });
@@ -29,7 +30,7 @@ describe('api-mock:useBaseRequest', () => {
       url: 'https://www.test.com/getName',
       name: '',
     });
-    console.log('返回了res', res.age);
+    consola.log('返回了res', res.age);
     expect(res.age).toBe(111);
   });
 });
