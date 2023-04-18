@@ -1,5 +1,11 @@
 # @applet-request/adapters
 
+## 0.1.3
+
+### Patch Changes
+
+- feat: 更新版本
+
 ## 0.1.2
 
 ### Patch Changes

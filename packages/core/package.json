@@ -1,6 +1,6 @@
 {
   "name": "@applet-request/core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "",
   "files": [
     "./dist"
@@ -20,6 +20,6 @@
   "author": "coder_pig",
   "license": "MIT",
   "dependencies": {
-    "@applet-request/shared": "workspace:^0.1.2"
+    "@applet-request/shared": "workspace:^0.1.3"
   }
 }
