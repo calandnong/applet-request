@@ -3,7 +3,7 @@
   "version": "1.0.4",
   "description": "",
   "files": [
-    "./dist"
+    "./dist/*"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",

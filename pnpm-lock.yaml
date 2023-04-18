@@ -81,7 +81,10 @@ importers:
       vitest: 0.29.8_@vitest+ui@0.29.8
 
   packages/adapters:
-    specifiers: {}
+    specifiers:
+      '@applet-request/core': workspace:^0.1.3
+    dependencies:
+      '@applet-request/core': link:../core
 
   packages/api-mock:
     specifiers: {}
