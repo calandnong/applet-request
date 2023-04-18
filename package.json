@@ -44,7 +44,7 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@dcloudio/types": "^3.3.2",
     "@dcloudio/uni-app": "^3.0.0-alpha-3000020210521001",
-    "@fastcoder/eslint-config-ts": "^1.0.3-beta.1",
+    "@fastcoder/eslint-config-ts": "^1.0.5",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@types/node": "^18.15.11",

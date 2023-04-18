@@ -6,7 +6,6 @@ import type { RequestContext, MiddlewareNext, RequestConfig } from '@applet-requ
  */
 export type UniDownloadFileOtherConfig = Omit<UniApp.DownloadFileOption, 'url' | 'fail' | 'success' | 'complete'>;
 
-
 /**
  * uni.downloadFile的请求配置
  */
@@ -22,11 +21,11 @@ export class UniDownloadFileAdaptor extends Adapter<
 > {
   async request(
     context: RequestContext<
-      UniDownloadFileOtherConfig, 
-      string, 
+      UniDownloadFileOtherConfig,
+      string,
       UniApp.DownloadSuccessData
-    >, 
-    next: MiddlewareNext
+    >,
+    next: MiddlewareNext,
   ) {
     await next();
     return new Promise((resolve, reject) => {
