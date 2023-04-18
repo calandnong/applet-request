@@ -1,5 +1,13 @@
 # @applet-request/core
 
+## 0.1.2
+
+### Patch Changes
+
+- 9c853f0: feat: 进入 beta
+- Updated dependencies [9c853f0]
+  - @applet-request/shared@0.1.2
+
 ## 0.1.2-beta.0
 
 ### Patch Changes

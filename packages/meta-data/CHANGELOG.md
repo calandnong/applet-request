@@ -1,5 +1,11 @@
 # @applet-request/meta-data
 
+## 0.1.3
+
+### Patch Changes
+
+- 9c853f0: feat: 进入 beta
+
 ## 0.1.3-beta.0
 
 ### Patch Changes

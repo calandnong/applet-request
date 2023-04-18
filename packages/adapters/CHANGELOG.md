@@ -1,5 +1,11 @@
 # @applet-request/adapters
 
+## 0.1.2
+
+### Patch Changes
+
+- 9c853f0: feat: 进入 beta
+
 ## 0.1.2-beta.0
 
 ### Patch Changes
