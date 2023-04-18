@@ -1,5 +1,5 @@
 import { Adapter } from '@applet-request/core';
-import type { 
+import type {
   RequestContext,
   MiddlewareNext,
 } from '@applet-request/core';
