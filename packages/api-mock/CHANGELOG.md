@@ -1,5 +1,11 @@
 # @applet-request/api-mock
 
+## 1.0.5
+
+### Patch Changes
+
+- feat: 更新 json
+
 ## 1.0.4
 
 ### Patch Changes

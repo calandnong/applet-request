@@ -1,5 +1,11 @@
 # @applet-request/eslint-config-ts
 
+## 0.1.4
+
+### Patch Changes
+
+- feat: 更新 json
+
 ## 0.1.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @applet-request/adapters
 
+## 0.1.4
+
+### Patch Changes
+
+- feat: 更新 json
+- Updated dependencies
+  - @applet-request/core@0.1.4
+
 ## 0.1.3
 
 ### Patch Changes

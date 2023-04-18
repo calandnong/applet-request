@@ -1,5 +1,11 @@
 # @applet-request/meta-data
 
+## 0.1.5
+
+### Patch Changes
+
+- feat: 更新 json
+
 ## 0.1.4
 
 ### Patch Changes
