@@ -2,6 +2,9 @@
   "name": "@applet-request/api-mock",
   "version": "1.0.3-beta.0",
   "description": "",
+  "files": [
+    "./dist"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

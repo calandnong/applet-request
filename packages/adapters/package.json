@@ -2,6 +2,9 @@
   "name": "@applet-request/adapters",
   "version": "0.1.2-beta.0",
   "description": "",
+  "files": [
+    "./dist"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",

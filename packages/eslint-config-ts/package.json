@@ -10,7 +10,7 @@
   ],
   "main": "index.js",
   "files": [
-    "index.js"
+    "*.js"
   ],
   "peerDependencies": {
     "eslint": ">=7.4.0",
