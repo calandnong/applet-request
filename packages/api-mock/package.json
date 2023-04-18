@@ -3,7 +3,9 @@
   "version": "1.0.5",
   "description": "",
   "files": [
-    "./dist/*"
+    "./dist/index.cjs",
+    "./dist/index.d.ts",
+    "./dist/index.mjs"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
