@@ -1,5 +1,11 @@
 # @applet-request/api-mock
 
+## 1.0.6
+
+### Patch Changes
+
+- feat: 修复包没内容问题
+
 ## 1.0.5
 
 ### Patch Changes

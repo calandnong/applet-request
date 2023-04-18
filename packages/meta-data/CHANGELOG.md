@@ -1,5 +1,11 @@
 # @applet-request/meta-data
 
+## 0.1.6
+
+### Patch Changes
+
+- feat: 修复包没内容问题
+
 ## 0.1.5
 
 ### Patch Changes

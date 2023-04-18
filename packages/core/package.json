@@ -1,6 +1,6 @@
 {
   "name": "@applet-request/core",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "files": [
     "./dist/index.cjs",
@@ -22,6 +22,6 @@
   "author": "coder_pig",
   "license": "MIT",
   "dependencies": {
-    "@applet-request/shared": "workspace:^0.1.4"
+    "@applet-request/shared": "workspace:^0.1.5"
   }
 }
