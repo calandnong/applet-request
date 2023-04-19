@@ -3,9 +3,7 @@
   "version": "0.1.5",
   "description": "",
   "files": [
-    "./dist/index.cjs",
-    "./dist/index.d.ts",
-    "./dist/index.mjs"
+    "dist"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -21,6 +19,9 @@
   "keywords": [],
   "author": "coder_pig",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "@applet-request/core": "workspace:^0.1.5"
   }

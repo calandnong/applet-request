@@ -3,9 +3,7 @@
   "version": "0.1.5",
   "description": "",
   "files": [
-    "./dist/index.cjs",
-    "./dist/index.d.ts",
-    "./dist/index.mjs"
+    "dist"
   ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
@@ -17,6 +15,9 @@
       "import": "./dist/index.mjs"
     },
     "./*": "./*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [],
   "author": "coder_pig",
