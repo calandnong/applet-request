@@ -1,5 +1,13 @@
 # @applet-request/api-mock
 
+## 1.0.7
+
+### Patch Changes
+
+- c87ca96: feat: 进入 beta 版本
+- 5043983: fix: 修复 shared 依赖问题
+- feat: 发布 0.1.6 版本
+
 ## 1.0.7-beta.1
 
 ### Patch Changes
