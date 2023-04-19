@@ -1,5 +1,11 @@
 # @applet-request/api-mock
 
+## 1.0.7-beta.1
+
+### Patch Changes
+
+- fix: 修复 shared 依赖问题
+
 ## 1.0.7-beta.0
 
 ### Patch Changes

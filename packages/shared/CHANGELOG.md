@@ -1,5 +1,11 @@
 # @applet-request/shared
 
+## 0.1.6-beta.1
+
+### Patch Changes
+
+- fix: 修复 shared 依赖问题
+
 ## 0.1.6-beta.0
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @applet-request/adapters
 
+## 0.1.6-beta.1
+
+### Patch Changes
+
+- fix: 修复 shared 依赖问题
+- Updated dependencies
+  - @applet-request/core@0.1.6-beta.1
+
 ## 0.1.6-beta.0
 
 ### Patch Changes

@@ -10,6 +10,7 @@
     "@applet-request/shared": "0.1.5"
   },
   "changesets": [
-    "calm-moons-retire"
+    "calm-moons-retire",
+    "great-beds-fold"
   ]
 }

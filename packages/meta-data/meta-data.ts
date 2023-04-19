@@ -13,12 +13,10 @@ export const PACKAGES: PackageManifest[] = [
     name: 'shared',
     displayName: 'Applet Request Shared Utilities',
     description: 'The core logical library of applet-request',
-    // external: [
-    //   'deepmerge',
-    //   'qs',
-    // ],
-    resolve: true,
-    browser: true,
+    external: [
+      'deepmerge',
+      'qs',
+    ],
   },
   {
     name: 'adapters',

@@ -1,6 +1,6 @@
 {
   "name": "@applet-request/adapters",
-  "version": "0.1.6-beta.0",
+  "version": "0.1.6-beta.1",
   "description": "",
   "files": [
     "dist"
@@ -22,7 +22,7 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "dependencies": {
-    "@applet-request/core": "workspace:^0.1.6-beta.0"
+  "peerDependencies": {
+    "@applet-request/core": "workspace:^0.1.6-beta.1"
   }
 }

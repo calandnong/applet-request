@@ -82,8 +82,8 @@ importers:
 
   packages/adapters:
     specifiers:
-      '@applet-request/core': workspace:^0.1.3
-    dependencies:
+      '@applet-request/core': workspace:^0.1.6-beta.0
+    devDependencies:
       '@applet-request/core': link:../core
 
   packages/api-mock:
