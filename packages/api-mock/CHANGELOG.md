@@ -1,5 +1,11 @@
 # @applet-request/api-mock
 
+## 1.0.7-beta.0
+
+### Patch Changes
+
+- feat: 进入 beta 版本
+
 ## 1.0.6
 
 ### Patch Changes

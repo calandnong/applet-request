@@ -1,5 +1,11 @@
 # @applet-request/shared
 
+## 0.1.6-beta.0
+
+### Patch Changes
+
+- feat: 进入 beta 版本
+
 ## 0.1.5
 
 ### Patch Changes
