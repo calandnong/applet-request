@@ -1,5 +1,14 @@
 # @applet-request/adapters
 
+## 0.1.7
+
+### Patch Changes
+
+- feat: 修复 xhr 转换 json 字符串问题
+- Updated dependencies
+  - @applet-request/shared@0.1.7
+  - @applet-request/core@0.1.7
+
 ## 0.1.6
 
 ### Patch Changes

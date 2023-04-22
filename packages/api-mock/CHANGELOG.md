@@ -1,5 +1,11 @@
 # @applet-request/api-mock
 
+## 1.0.8
+
+### Patch Changes
+
+- feat: 修复 xhr 转换 json 字符串问题
+
 ## 1.0.7
 
 ### Patch Changes
