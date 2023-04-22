@@ -23,6 +23,6 @@
   "author": "coder_pig",
   "license": "MIT",
   "dependencies": {
-    "@applet-request/shared": "workspace:^0.1.6"
+    "@applet-request/shared": "workspace:*"
   }
 }
