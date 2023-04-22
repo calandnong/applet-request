@@ -1,7 +1,6 @@
 import type { MiddlewareNext, RequestConfig, RequestContext, TransformRequestConfig } from '@applet-request/core';
 import { Adapter } from '@applet-request/core';
-import { BaseException, isHttpSuccess } from '@applet-request/shared';
-import { transformRequest } from '@applet-request/shared/data';
+import { BaseException, isHttpSuccess, transformRequest } from '@applet-request/shared';
 
 export interface XHRBasicCredentials {
   username: string;
