@@ -1,6 +1,7 @@
 import type { MiddlewareNext, RequestConfig, RequestContext, TransformRequestConfig } from '@applet-request/core';
 import { Adapter } from '@applet-request/core';
 import { BaseException, isHttpSuccess } from '@applet-request/shared';
+import { transformRequest } from '@applet-request/shared/data';
 
 export interface XHRBasicCredentials {
   username: string;
@@ -231,7 +232,7 @@ XHROtherConfig,
       // 设置自定义请求头
       processHeaders();
 
-      xhr.send(data as Document | XMLHttpRequestBodyInit | null | undefined);
+      xhr.send(transformRequest(data) as Document | XMLHttpRequestBodyInit | null | undefined);
     });
   }
 }
