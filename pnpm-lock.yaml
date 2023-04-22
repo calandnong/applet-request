@@ -82,16 +82,18 @@ importers:
 
   packages/adapters:
     specifiers:
-      '@applet-request/core': workspace:^0.1.6-beta.0
-    devDependencies:
+      '@applet-request/core': workspace:*
+      '@applet-request/shared': workspace:*
+    dependencies:
       '@applet-request/core': link:../core
+      '@applet-request/shared': link:../shared
 
   packages/api-mock:
     specifiers: {}
 
   packages/core:
     specifiers:
-      '@applet-request/shared': workspace:^0.1.3
+      '@applet-request/shared': workspace:^0.1.6
     dependencies:
       '@applet-request/shared': link:../shared
 

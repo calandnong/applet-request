@@ -22,7 +22,8 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
-  "peerDependencies": {
-    "@applet-request/core": "workspace:^0.1.6"
+  "dependencies": {
+    "@applet-request/core": "workspace:*",
+    "@applet-request/shared": "workspace:*"
   }
 }
