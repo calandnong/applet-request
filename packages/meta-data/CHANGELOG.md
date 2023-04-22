@@ -1,5 +1,11 @@
 # @applet-request/meta-data
 
+## 0.1.9
+
+### Patch Changes
+
+- feat: 解决编译引用问题
+
 ## 0.1.8
 
 ### Patch Changes

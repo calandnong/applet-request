@@ -1,5 +1,14 @@
 # @applet-request/adapters
 
+## 0.1.8
+
+### Patch Changes
+
+- feat: 解决编译引用问题
+- Updated dependencies
+  - @applet-request/shared@0.1.8
+  - @applet-request/core@0.1.8
+
 ## 0.1.7
 
 ### Patch Changes

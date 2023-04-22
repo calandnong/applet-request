@@ -1,5 +1,11 @@
 # @applet-request/api-mock
 
+## 1.0.9
+
+### Patch Changes
+
+- feat: 解决编译引用问题
+
 ## 1.0.8
 
 ### Patch Changes
