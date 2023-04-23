@@ -1,11 +1,25 @@
 {
   "name": "@applet-request/api-mock",
-  "version": "1.0.0",
+  "version": "1.0.9",
   "description": "",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [],
-  "author": "",
+  "author": "coder_pig",
   "license": "ISC"
 }

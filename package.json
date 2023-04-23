@@ -1,6 +1,7 @@
 {
   "name": "@applet-request/monorepo",
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.1.0-beta",
   "description": "#### Description uniapp下的request封装",
   "main": "index.js",
   "scripts": {
@@ -14,7 +15,11 @@
     "lint-staged": "lint-staged",
     "commitlint": "commitlint --config .commitlintrc.cjs --edit $1",
     "husky:init": "npx husky-init",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm run build && pnpm release:only",
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
   },
   "keywords": [],
   "author": "",
@@ -28,16 +33,20 @@
     "pnpm": ">=6.32.20"
   },
   "devDependencies": {
-    "@applet-request/adapters": "workspace:^1.0.0",
-    "@applet-request/api-mock": "workspace:^1.0.0",
-    "@applet-request/core": "workspace:^1.0.0",
-    "@applet-request/eslint-config-ts": "workspace:^0.1.0",
-    "@applet-request/meta-data": "workspace:^1.0.0",
-    "@applet-request/shared": "workspace:^1.0.0",
+    "@applet-request/adapters": "workspace:*",
+    "@applet-request/api-mock": "workspace:*",
+    "@applet-request/core": "workspace:*",
+    "@applet-request/eslint-config-ts": "workspace:*",
+    "@applet-request/meta-data": "workspace:*",
+    "@applet-request/shared": "workspace:*",
+    "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@dcloudio/types": "^3.3.2",
     "@dcloudio/uni-app": "^3.0.0-alpha-3000020210521001",
+    "@fastcoder/eslint-config-ts": "^1.0.5",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.2",
     "@types/node": "^18.15.11",
     "@types/qs": "^6.9.7",
     "@typescript-eslint/eslint-plugin": "^5.57.0",

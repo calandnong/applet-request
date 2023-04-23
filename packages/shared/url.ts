@@ -16,17 +16,17 @@ export function buildURL(
   params?: RequestParams,
 ): string {
   let finalUrl = url;
-  if (!params) 
+  if (!params)
     return finalUrl;
-  
+
   // 处理params
   const serializedParams = qs.stringify(params);
   // 拼接params
   if (serializedParams) {
     const markIndex = url.indexOf('#');
-    if (markIndex !== -1) 
+    if (markIndex !== -1)
       finalUrl = finalUrl.slice(0, markIndex);
-    
+
     finalUrl += (finalUrl.indexOf('?') === -1 ? '?' : '&') + serializedParams;
   }
   return finalUrl;

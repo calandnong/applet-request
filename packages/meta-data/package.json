@@ -1,11 +1,10 @@
 {
   "name": "@applet-request/meta-data",
-  "version": "1.0.0",
+  "private": true,
+  "version": "0.1.9",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "keywords": [],
-  "author": "calcalme",
+  "author": "coder_pig",
   "license": "MIT"
 }

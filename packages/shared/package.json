@@ -1,15 +1,29 @@
 {
   "name": "@applet-request/shared",
-  "version": "1.0.0",
+  "version": "0.1.8",
   "description": "",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
   "keywords": [],
-  "author": "",
+  "author": "coder_pig",
   "license": "MIT",
   "dependencies": {
     "deepmerge": "^4.3.1",
     "qs": "^6.11.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

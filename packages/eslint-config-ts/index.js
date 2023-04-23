@@ -61,7 +61,6 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/prefer-ts-expect-error': 'error',
-    '@typescript-eslint/no-explicit-any': 'error',
     'import/extensions': 'off',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error', { ignoreTypeReferences: true }],
@@ -165,7 +164,6 @@ module.exports = {
 
     // other
     'no-useless-constructor': 'off',
-    'indent': 'off',
     '@typescript-eslint/indent': ['error', 2, {
       SwitchCase: 1,
       VariableDeclarator: 1,
@@ -206,21 +204,14 @@ module.exports = {
     }],
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
-    'brace-style': 'off',
     '@typescript-eslint/brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
-    'comma-dangle': 'off',
     '@typescript-eslint/comma-dangle': ['error', 'always-multiline'],
-    'object-curly-spacing': 'off',
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     'semi': 'off',
     '@typescript-eslint/semi': 'error',
-    'quotes': 'off',
     '@typescript-eslint/quotes': ['error', 'single'],
     'space-before-blocks': 'off',
     '@typescript-eslint/space-before-blocks': ['error', 'always'],
-    'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': [
       'error',
       {
@@ -233,7 +224,6 @@ module.exports = {
     '@typescript-eslint/space-infix-ops': 'error',
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': ['error', { before: true, after: true }],
-    'comma-spacing': 'off',
     '@typescript-eslint/comma-spacing': ['error', { before: false, after: true }],
     'no-extra-parens': 'off',
     '@typescript-eslint/no-extra-parens': ['error', 'functions'],

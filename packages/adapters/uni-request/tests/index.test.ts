@@ -1,7 +1,8 @@
 import { describe, test, expect } from 'vitest';
 import { setUniRequestConfig } from '@applet-request/api-mock';
 import { HttpRequest } from '@applet-request/core';
-import { UniRequestAdaptor } from '..';
+import consola from 'consola';
+import { UniRequestAdapter } from '..';
 
 interface CommonResponse<Data = unknown> {
   code: number;
@@ -48,15 +49,15 @@ setUniRequestConfig<Response>({
 });
 
 describe('uni-request', () => {
-  const instance = new HttpRequest(new UniRequestAdaptor());
+  const instance = new HttpRequest(new UniRequestAdapter());
 
   instance.setDefaultConfig({
   });
 
   instance.use(async ({ request, response }, next) => {
-    console.log('request.config', request);
+    consola.log('request.config', request);
     await next();
-    console.log(response);
+    consola.log(response);
   });
   test('request-success', async () => {
     const res = await instance.request<CommonResponse<{}>>({
@@ -70,5 +71,4 @@ describe('uni-request', () => {
     });
     expect(res.code).toEqual(200);
   });
-
 });

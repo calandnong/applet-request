@@ -1,5 +1,5 @@
-import { describe, it, expect } from 'vitest';
 import assert from 'assert';
+import { describe, it, expect } from 'vitest';
 import type { Middleware } from '..';
 import { compose } from '..';
 
@@ -103,9 +103,8 @@ describe('Request Compose', () => {
 
     compose(stack)({});
 
-    for (const next of arr) 
+    for (const next of arr)
       assert(isPromise(next as Promise<unknown>), 'one of the functions next is not a Promise');
-    
   });
 
   it('should work with 0 middleware', () => {
@@ -134,8 +133,8 @@ describe('Request Compose', () => {
   it('should reject on errors in middleware', () => {
     const stack: Middleware<unknown>[] = [];
 
-    stack.push(() => { 
-      throw new Error(); 
+    stack.push(() => {
+      throw new Error();
     });
 
     return compose(stack)({})
@@ -304,15 +303,13 @@ describe('Request Compose', () => {
     };
     middleware.push(fn1);
 
-    for (const fn of middleware) 
+    for (const fn of middleware)
       assert.equal(fn, fn1);
-    
 
     compose(middleware);
 
-    for (const fn of middleware) 
+    for (const fn of middleware)
       assert.equal(fn, fn1);
-    
   });
 
   it('should not get stuck on the passed in next', () => {

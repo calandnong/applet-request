@@ -1,13 +1,13 @@
 import { buildFullPath, buildURL, mergeConfig, BaseException } from '@applet-request/shared';
-import type { 
-  Middleware, 
-  Adaptor,
-  RequestContext, 
-  TransformRequestConfig, 
+import type {
+  Middleware,
+  Adapter,
+  RequestContext,
+  TransformRequestConfig,
   RequestDefaultConfig,
   RequestConfig,
 } from '..';
-import { compose } from '..';
+import { compose } from '../compose/index';
 
 /**
  * 网络请求类
@@ -29,14 +29,14 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
 
   /**
    * 网络请求类
-   * @param adaptor 适配器
+   * @param adapter 适配器
    */
-  constructor(private adaptor: Adaptor<Config, CommonResponse, RawResponse>) {
+  constructor(private adapter: Adapter<Config, CommonResponse, RawResponse>) {
   }
 
   /**
    * 合并和覆盖默认请求配置
-   * @param config 
+   * @param config
    */
   private mergeConfig(config: Partial<TransformRequestConfig<Config>>) {
     this.defaultConfig = mergeConfig(this.defaultConfig, config);
@@ -44,7 +44,7 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
 
   /**
    * 设置请求默认配置
-   * @param config 
+   * @param config
    */
   setDefaultConfig(config: RequestDefaultConfig<Config>) {
     this.mergeConfig({
@@ -54,7 +54,7 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
 
   /**
    * 使用中间件
-   * @param middleware 
+   * @param middleware
    */
   use(middleware: Middleware<RequestContext<Config, CommonResponse, RawResponse>>) {
     this.middleware.push(middleware);
@@ -62,18 +62,18 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
 
   /**
    * 请求方法
-   * @param options 
-   * @returns 
+   * @param options
+   * @returns
    */
   request<Response>(options: RequestConfig<Config>): Promise<Response & CommonResponse> {
     const request = compose(this.middleware);
     const context = this.createContext<Response>(options);
     return request(context, (context, next) => {
-      return this.adaptor.request(context, next);
+      return this.adapter.request(context, next);
     }).then(() => {
-      if (!context.response.data) 
-        return Promise.reject(new BaseException('context.response.data is undefined, you need to set this data in adaptor!'));
-      
+      if (!context.response.data) {
+        return Promise.reject(new BaseException('Response data is empty!'));
+      }
       return context.response.data;
     });
   }
@@ -105,8 +105,8 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
 
   /**
    * 创建中间件上下文
-   * @param options 
-   * @returns 
+   * @param options
+   * @returns
    */
   private createContext<Response>(options: RequestConfig<Config>): RequestContext<Config, CommonResponse & Response, RawResponse, HttpRequest<Config, CommonResponse & Response, RawResponse>> {
     return {

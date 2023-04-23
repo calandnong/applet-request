@@ -1,6 +1,6 @@
-import { RequestParams } from '@applet-request/shared';
+import type { RequestParams } from '@applet-request/shared';
 
-export {
+export type {
   RequestParams,
 };
 
@@ -19,7 +19,7 @@ export interface RequestConfig<Config = unknown> {
   /**
    * 请求体, 以后有更动态需求可以考虑替换为unknown
    */
-  data?: string | object | ArrayBuffer;
+  data?: unknown;
   /**
    * 其他配置
    */

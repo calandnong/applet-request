@@ -1,11 +1,28 @@
 {
   "name": "@applet-request/core",
-  "version": "1.0.0",
+  "version": "0.1.8",
   "description": "",
+  "files": [
+    "dist"
+  ],
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [],
-  "author": "",
-  "license": "MIT"
+  "author": "coder_pig",
+  "license": "MIT",
+  "dependencies": {
+    "@applet-request/shared": "workspace:*"
+  }
 }

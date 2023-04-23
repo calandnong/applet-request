@@ -16,10 +16,8 @@ export type Middleware<Context> = (
 export function compose<Context>(middleware: Middleware<Context>[]) {
   if (!Array.isArray(middleware)) throw new TypeError('Middleware stack must be an array!');
 
-
-  for (const fn of middleware) 
+  for (const fn of middleware)
     if (typeof fn !== 'function') throw new TypeError('Middleware must be composed of functions!');
-  
 
   return (context: Context, next?: Middleware<Context>) => {
     // last called middleware #

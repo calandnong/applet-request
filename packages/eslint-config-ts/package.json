@@ -1,8 +1,8 @@
 {
   "name": "@applet-request/eslint-config-ts",
-  "version": "0.1.0",
+  "version": "0.1.8",
   "description": "",
-  "author": "",
+  "author": "coder_pig",
   "license": "MIT",
   "homepage": "https://github.com/callmecalcal/applet-request/tree/master/packages/eslint-config-ts",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "main": "index.js",
   "files": [
-    "index.js"
+    "*.js"
   ],
   "peerDependencies": {
     "eslint": ">=7.4.0",
@@ -23,5 +23,8 @@
   },
   "devDependencies": {
     "eslint": "^8.36.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }

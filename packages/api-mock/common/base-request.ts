@@ -31,7 +31,7 @@ export interface RequestMapResponse<Request, Data = unknown> extends Partial<Def
 
 /**
  * 基础请求方法
- * @returns 
+ * @returns
  */
 export const useBaseRequest = <Request, Response = unknown>() => {
   const requestMap = new Map<string, RequestMapResponse<Request, Response>>();
@@ -52,12 +52,12 @@ export const useBaseRequest = <Request, Response = unknown>() => {
         if (typeof response.isSuccess !== 'boolean') {
           response.isSuccess = responseConfig.isSuccess;
         }
-        
+
         if (response.isSuccess) {
           resolve(data);
           return;
         }
- 
+
         reject(data);
       }, response?.timeout ?? responseConfig.timeout);
     });
