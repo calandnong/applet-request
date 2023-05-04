@@ -1,5 +1,14 @@
 # @applet-request/core
 
+## 0.1.9
+
+### Patch Changes
+
+- fix: 修复 xhr 的转换 data 问题&增加 axios 的版本
+
+- Updated dependencies []:
+  - @applet-request/shared@0.1.9
+
 ## 0.1.8
 
 ### Patch Changes
