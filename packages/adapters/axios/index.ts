@@ -18,11 +18,11 @@ export type AxiosConfig = RequestConfig<AxiosOtherConfig>;
  * axios的请求适配器
  */
 export class AxiosAdapter<Data> extends Adapter<
-AxiosConfig,
+AxiosOtherConfig,
 Data,
 AxiosResponse
 > {
-  async request(context: RequestContext<AxiosConfig, Data, AxiosResponse>, next: MiddlewareNext): Promise<unknown> {
+  async request(context: RequestContext<AxiosOtherConfig, Data, AxiosResponse>, next: MiddlewareNext): Promise<unknown> {
     await next();
     return request({
       ...context.request.config,
