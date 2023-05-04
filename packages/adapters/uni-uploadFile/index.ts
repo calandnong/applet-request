@@ -4,7 +4,7 @@ import type { RequestContext, MiddlewareNext, RequestConfig } from '@applet-requ
 /**
  * uni.downloadFile的其他请求配置
  */
-export type UniUploadFileOtherConfig = Omit<UniApp.UploadFileOption, 'url' | 'fail' | 'success' | 'complete'>;
+export type UniUploadFileOtherConfig = Omit<UniApp.UploadFileOption, 'url' | 'fail' | 'success' | 'complete' | 'formData'>;
 
 /**
  * uni.downloadFile的请求配置
@@ -32,6 +32,7 @@ export class UniUploadFileAdaptor<Data> extends Adapter<
       uni.uploadFile({
         ...context.request.config,
         url: context.request.apiURL,
+        formData: context.request.data,
         success(res) {
           context.response.data = res.data as Data;
           context.response.raw = res;

@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@applet-request/core": "workspace:*",
-    "@applet-request/shared": "workspace:*"
+    "@applet-request/shared": "workspace:*",
+    "axios": "^1.4.0"
   }
 }
