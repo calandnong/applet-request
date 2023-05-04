@@ -22,6 +22,9 @@ export const PACKAGES: PackageManifest[] = [
     name: 'adapters',
     displayName: 'Adapters Collection',
     description: 'The collection of adapters for applet-request',
+    external: [
+      'axios',
+    ],
   },
   {
     name: 'api-mock',
