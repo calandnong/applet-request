@@ -1,5 +1,17 @@
 # @applet-request/eslint-config-ts
 
+## 0.1.10
+
+### Patch Changes
+
+- fix: 修复 axios 依赖问题
+
+## 0.1.9
+
+### Patch Changes
+
+- fix: 修复 xhr 的转换 data 问题&增加 axios 的版本
+
 ## 0.1.8
 
 ### Patch Changes
