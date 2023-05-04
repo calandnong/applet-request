@@ -1,5 +1,11 @@
 # @applet-request/meta-data
 
+## 0.1.11
+
+### Patch Changes
+
+- fix: 修复 axios 依赖问题
+
 ## 0.1.10
 
 ### Patch Changes

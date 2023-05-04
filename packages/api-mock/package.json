@@ -1,6 +1,6 @@
 {
   "name": "@applet-request/api-mock",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "",
   "files": [
     "dist"
