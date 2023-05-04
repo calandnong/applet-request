@@ -1,5 +1,11 @@
 # @applet-request/adapters
 
+## 0.1.11
+
+### Patch Changes
+
+- fix: 修复 axios 配置类型问题
+
 ## 0.1.10
 
 ### Patch Changes
