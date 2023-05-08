@@ -2,19 +2,28 @@ import { Adapter } from '@applet-request/core';
 import type {
   RequestContext,
   MiddlewareNext,
+  RequestConfig,
 } from '@applet-request/core';
 
-export type UniRequestConfig = Omit<UniApp.RequestOptions, 'url' | 'data' | 'fail' | 'success' | 'complete'>;
+/**
+ * uni.request的其他请求配置
+ */
+export type UniRequestOtherConfig = Omit<UniApp.RequestOptions, 'url' | 'data' | 'fail' | 'success' | 'complete'>;
+
+/**
+ * uni.request的请求配置
+ */
+export type UniRequestConfig = RequestConfig<UniRequestOtherConfig>;
 
 /**
  * uni.request的请求适配器
  */
 export class UniRequestAdapter<Data> extends Adapter<
-UniRequestConfig,
+UniRequestOtherConfig,
 Data,
 UniApp.RequestSuccessCallbackResult
 > {
-  async request(context: RequestContext<UniRequestConfig, Data, UniApp.RequestSuccessCallbackResult>, next: MiddlewareNext): Promise<unknown> {
+  async request(context: RequestContext<UniRequestOtherConfig, Data, UniApp.RequestSuccessCallbackResult>, next: MiddlewareNext): Promise<unknown> {
     await next();
     return new Promise((resolve, reject) => {
       uni.request({
