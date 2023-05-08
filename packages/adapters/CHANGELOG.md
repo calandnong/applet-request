@@ -1,5 +1,11 @@
 # @applet-request/adapters
 
+## 0.1.12
+
+### Patch Changes
+
+- fix: 修复 axios 的 params 重复问题&修复 request 类型问题
+
 ## 0.1.11
 
 ### Patch Changes
