@@ -8,10 +8,19 @@ import { BaseException, isHttpSuccess } from '@applet-request/shared';
 import type { AxiosRequestConfig, AxiosResponse } from 'axios';
 import AxiosStatic from 'axios';
 
+/**
+ * 请求单例
+ */
 const request = AxiosStatic.create();
 
+/**
+ * axios的其他请求配置
+ */
 export type AxiosOtherConfig = Omit<AxiosRequestConfig, 'url' | 'params' | 'data'>;
 
+/**
+ * axios的请求配置
+ */
 export type AxiosConfig = RequestConfig<AxiosOtherConfig>;
 
 /**
@@ -28,7 +37,6 @@ AxiosResponse
       ...context.request.config,
       url: context.request.apiURL,
       data: context.request.data,
-      params: context.request.params,
     }).then((res) => {
       if (isHttpSuccess(res.status)) {
         context.response.data = res.data;
