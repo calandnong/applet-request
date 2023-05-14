@@ -1,5 +1,11 @@
 # @applet-request/adapters
 
+## 0.1.13
+
+### Patch Changes
+
+- feat: core 部分将@applet-request/shared 作为 external
+
 ## 0.1.12
 
 ### Patch Changes
