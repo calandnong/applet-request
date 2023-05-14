@@ -8,6 +8,9 @@ export const PACKAGES: PackageManifest[] = [
     name: 'core',
     displayName: 'Applet Request Core',
     description: 'The core logical library of applet-request',
+    external: [
+      '@applet-request/shared',
+    ],
   },
   {
     name: 'shared',
