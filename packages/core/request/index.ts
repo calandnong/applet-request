@@ -102,7 +102,7 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
     });
 
     // 修复mergeConfig丢失formdata todo封装处理判断
-    if (FormData && options.data instanceof FormData) {
+    if (typeof FormData === 'object' && options.data instanceof FormData) {
       transformRequest.data = options.data;
     }
     return transformRequest;
