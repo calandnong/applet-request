@@ -100,6 +100,11 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
       ...options,
       apiURL: url,
     });
+
+    // 修复mergeConfig丢失formdata todo封装处理判断
+    if (FormData && options.data instanceof FormData) {
+      transformRequest.data = options.data;
+    }
     return transformRequest;
   }
 
