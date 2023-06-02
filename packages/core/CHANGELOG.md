@@ -1,5 +1,11 @@
 # @applet-request/core
 
+## 0.1.11-beta.0
+
+### Patch Changes
+
+- fix: fix merge formdata
+
 ## 0.1.10
 
 ### Patch Changes
