@@ -10,6 +10,7 @@
     "@applet-request/shared": "0.1.10"
   },
   "changesets": [
-    "four-birds-cross"
+    "four-birds-cross",
+    "shaggy-students-cheat"
   ]
 }

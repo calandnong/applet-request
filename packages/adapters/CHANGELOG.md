@@ -1,5 +1,12 @@
 # @applet-request/adapters
 
+## 0.1.14-beta.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @applet-request/core@0.1.11-beta.1
+
 ## 0.1.14-beta.0
 
 ### Patch Changes
