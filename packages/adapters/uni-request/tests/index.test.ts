@@ -52,6 +52,7 @@ describe('uni-request', () => {
   const instance = new HttpRequest(new UniRequestAdapter());
 
   instance.setDefaultConfig({
+    baseURL: 'https://www.test.com',
   });
 
   instance.use(async ({ request, response }, next) => {
@@ -61,7 +62,7 @@ describe('uni-request', () => {
   });
   test('request-success', async () => {
     const res = await instance.request<CommonResponse<{}>>({
-      url: 'https://www.test.com/api/getList',
+      url: '/api/getList',
       data: {
         name: '',
       },
