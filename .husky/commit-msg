@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npm run commitlint
+# npm run commitlint
+npx commitlint --config .commitlintrc.cjs --edit ${1}

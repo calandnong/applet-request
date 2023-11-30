@@ -1,5 +1,17 @@
 # @applet-request/core
 
+## 0.1.11-beta.1
+
+### Patch Changes
+
+- fix: 修复 FormData 判断问题
+
+## 0.1.11-beta.0
+
+### Patch Changes
+
+- fix: fix merge formdata
+
 ## 0.1.10
 
 ### Patch Changes

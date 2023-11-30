@@ -1,0 +1,16 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@applet-request/adapters": "0.1.13",
+    "@applet-request/api-mock": "1.0.11",
+    "@applet-request/core": "0.1.10",
+    "@applet-request/eslint-config-ts": "0.1.10",
+    "@applet-request/meta-data": "0.1.12",
+    "@applet-request/shared": "0.1.10"
+  },
+  "changesets": [
+    "four-birds-cross",
+    "shaggy-students-cheat"
+  ]
+}

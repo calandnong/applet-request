@@ -19,7 +19,10 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "pnpm run build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/"
+    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "docs:preview": "vitepress preview docs",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +36,7 @@
     "pnpm": ">=6.32.20"
   },
   "devDependencies": {
+    "@algolia/client-search": "^4.9.1",
     "@applet-request/adapters": "workspace:*",
     "@applet-request/api-mock": "workspace:*",
     "@applet-request/core": "workspace:*",
@@ -67,9 +71,11 @@
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-esbuild": "^5.0.0",
     "rollup-plugin-pure": "^0.0.2",
+    "search-insights": "^2.11.0",
     "ts-node": "^10.9.1",
     "tsx": "^3.12.6",
     "typescript": "^4.9.5",
+    "vitepress": "^1.0.0-rc.31",
     "vitest": "^0.29.2"
   }
 }
