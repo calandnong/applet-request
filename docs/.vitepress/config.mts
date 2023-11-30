@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'Applet Request',
   description: 'Awesome Applet Request Library',
-  base: './',
+  base: '/applet-request',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
