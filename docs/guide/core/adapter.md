@@ -4,11 +4,11 @@
 ## 官方提供的适配器
 | 适配器 | 说明 |
 | ------- | ----------- |
-| [AxiosAdapter]() | 适配axios |
-| [UniDownloadFileAdaptor]() | 适配uni.downloadFile |
-| [UniRequestAdapter]() | 适配uni.request |
-| [UniUploadFileAdaptor]() | 适配uni.uploadFile |
-| [XHROtherConfig]() | 适配xhr |
+| [AxiosAdapter](/guide/adapters/axios) | 适配axios |
+| [UniDownloadFileAdaptor](/guide/adapters/uniapp-downloadFile) | 适配uni.downloadFile |
+| [UniRequestAdapter](/guide/adapters/uniapp-request) | 适配uni.request |
+| [UniUploadFileAdaptor](/guide/adapters/uniapp-uploadFile) | 适配uni.uploadFile |
+| [XHROtherConfig](/guide/adapters/xhr) | 适配xhr |
 
 ## 如何自己编写适配器？
 ```typescript

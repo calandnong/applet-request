@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /guide/what-is-applet-request
+      link: /guide/introduce/what-is-applet-request
     - theme: alt
       text: 查看源码
       link: https://github.com/calandnong/applet-request

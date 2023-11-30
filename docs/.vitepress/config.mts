@@ -43,6 +43,7 @@ export default defineConfig({
             { text: 'uni.downloadFile 适配器', link: '/uniapp-downloadFile' },
             { text: 'uni.request 适配器', link: '/uniapp-request' },
             { text: 'uni.uploadFile 适配器', link: '/uniapp-uploadFile' },
+            { text: 'xhr 适配器', link: '/xhr' },
           ],
         },
       ],
