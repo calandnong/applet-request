@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.HseUURnm.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/adapters/xhr.md","filePath":"guide/adapters/xhr.md"}'),r={name:"guide/adapters/xhr.md"};function s(o,d,c,n,p,i){return t(),a("div")}const f=e(r,[["render",s]]);export{m as __pageData,f as default};

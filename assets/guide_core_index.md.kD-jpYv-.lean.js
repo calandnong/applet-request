@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as r}from"./chunks/framework.HseUURnm.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/core/index.md","filePath":"guide/core/index.md"}'),a={name:"guide/core/index.md"};function o(n,c,d,i,s,p){return t(),r("div")}const f=e(a,[["render",o]]);export{m as __pageData,f as default};
