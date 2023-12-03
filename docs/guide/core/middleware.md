@@ -21,16 +21,10 @@ class HttpException extends BaseException {
  * 处理http层错误报错中间件
  */
 requestInstance.use(async (context, next) => {
-  try {
-    await next();
-  }
-  catch (error) {
-    // 判断是否是http成功的状态
-    if (!isHttpSuccess(context.response.raw.statusCode)) {
-      throw new HttpException('错误，请重试！', context.response.raw);
-    }
-    // 不是则原错误继续向外抛出
-    throw error;
+  await next();
+  // 判断是否是http成功的状态
+  if (!isHttpSuccess(context.response.raw.statusCode)) {
+    throw new HttpException('错误，请重试！', context.response.raw);
   }
 });
 ```
