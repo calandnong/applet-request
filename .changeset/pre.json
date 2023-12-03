@@ -1,5 +1,5 @@
 {
-  "mode": "pre",
+  "mode": "exit",
   "tag": "beta",
   "initialVersions": {
     "@applet-request/adapters": "0.1.13",
@@ -10,6 +10,7 @@
     "@applet-request/shared": "0.1.10"
   },
   "changesets": [
+    "curvy-spies-marry",
     "four-birds-cross",
     "shaggy-students-cheat"
   ]

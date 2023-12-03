@@ -1,5 +1,11 @@
 # @applet-request/core
 
+## 0.1.11-beta.2
+
+### Patch Changes
+
+- feat: 底层增加异常兜底机制
+
 ## 0.1.11-beta.1
 
 ### Patch Changes

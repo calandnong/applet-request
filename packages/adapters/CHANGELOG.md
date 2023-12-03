@@ -1,5 +1,14 @@
 # @applet-request/adapters
 
+## 0.1.14-beta.2
+
+### Patch Changes
+
+- feat: 底层增加异常兜底机制
+
+- Updated dependencies []:
+  - @applet-request/core@0.1.11-beta.2
+
 ## 0.1.14-beta.1
 
 ### Patch Changes
