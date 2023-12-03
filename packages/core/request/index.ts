@@ -8,6 +8,7 @@ import type {
   RequestConfig,
 } from '..';
 import { compose } from '../compose/index';
+import { BaseExceptionMessage } from '../types/exceptions';
 
 /**
  * 网络请求类
@@ -72,10 +73,18 @@ export class HttpRequest<Config = unknown, CommonResponse = unknown, RawResponse
       return this.adapter.request(context, next);
     }).then(() => {
       if (!context.response.data) {
-        return Promise.reject(new BaseException('Response data is empty!'));
+        return Promise.reject(new BaseException(BaseExceptionMessage.RESPONSE_DATA_IS_EMPTY, context.response.raw));
       }
       return context.response.data;
-    });
+    })
+      .catch((err) => {
+        // 适配器层使用BaseException进行包装的异常，将会继续往外被抛出
+        if (err instanceof BaseException) {
+          return Promise.reject(err);
+        }
+        // 如果适配器层没有使用BaseException进行包装，此处将会默认兜底处理
+        return Promise.reject(new BaseException(BaseExceptionMessage.REQUEST_FAIL, err));
+      });
   }
 
   /**

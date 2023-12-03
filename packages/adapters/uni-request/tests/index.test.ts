@@ -2,7 +2,7 @@ import { describe, test, expect } from 'vitest';
 import { setUniRequestConfig } from '@applet-request/api-mock';
 import { HttpRequest } from '@applet-request/core';
 import consola from 'consola';
-import { UniRequestAdapter } from '..';
+import { UniRequestAdapter, UniRequestFailException } from '..';
 
 interface CommonResponse<Data = unknown> {
   code: number;
@@ -46,6 +46,16 @@ setUniRequestConfig<Response>({
       };
     },
   },
+  'https://www.test.com/api/getFail': {
+    isSuccess: false,
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment, @typescript-eslint/prefer-ts-expect-error
+    // @ts-ignore
+    getData() {
+      return {
+        errMsg: '出错了',
+      };
+    },
+  },
 });
 
 describe('uni-request', () => {
@@ -71,5 +81,21 @@ describe('uni-request', () => {
       },
     });
     expect(res.code).toEqual(200);
+  });
+  test('request-fail', async () => {
+    try {
+      await instance.request<CommonResponse<{}>>({
+        url: '/api/getList',
+        data: {
+          name: '',
+        },
+        config: {
+          method: 'POST',
+        },
+      });
+    }
+    catch (error) {
+      expect(error instanceof UniRequestFailException).toEqual(true);
+    }
   });
 });

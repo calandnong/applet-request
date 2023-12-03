@@ -4,6 +4,7 @@ import type {
   MiddlewareNext,
   RequestConfig,
 } from '@applet-request/core';
+import { BaseException } from '@applet-request/shared';
 
 /**
  * uni.request的其他请求配置
@@ -14,6 +15,12 @@ export type UniRequestOtherConfig = Omit<UniApp.RequestOptions, 'url' | 'data' |
  * uni.request的请求配置
  */
 export type UniRequestConfig = RequestConfig<UniRequestOtherConfig>;
+
+export class UniRequestFailException extends BaseException<UniApp.GeneralCallbackResult> {
+  constructor(message: string, raw?: UniApp.GeneralCallbackResult, options?: ErrorOptions | undefined) {
+    super(message, raw, options);
+  }
+}
 
 /**
  * uni.request的请求适配器
@@ -36,7 +43,7 @@ UniApp.RequestSuccessCallbackResult
           resolve(res);
         },
         fail(err) {
-          reject(err);
+          reject(new UniRequestFailException(err.errMsg, err));
         },
       });
     });
