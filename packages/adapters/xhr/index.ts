@@ -225,13 +225,16 @@ XHROtherConfig,
       //
       configureRequest();
 
+      // 转换data
+      const finalData = transformRequest(data, header);
+
       // 监听回调
       addEvents();
 
       // 设置自定义请求头
       processHeaders();
 
-      xhr.send(transformRequest(data) as Document | XMLHttpRequestBodyInit | null | undefined);
+      xhr.send(finalData as Document | XMLHttpRequestBodyInit | null | undefined);
     });
   }
 }

@@ -1,5 +1,37 @@
 # @applet-request/adapters
 
+## 0.1.12
+
+### Patch Changes
+
+- fix: 修复 axios 的 params 重复问题&修复 request 类型问题
+
+## 0.1.11
+
+### Patch Changes
+
+- fix: 修复 axios 配置类型问题
+
+## 0.1.10
+
+### Patch Changes
+
+- fix: 修复 axios 依赖问题
+
+- Updated dependencies []:
+  - @applet-request/shared@0.1.10
+  - @applet-request/core@0.1.10
+
+## 0.1.9
+
+### Patch Changes
+
+- fix: 修复 xhr 的转换 data 问题&增加 axios 的版本
+
+- Updated dependencies []:
+  - @applet-request/core@0.1.9
+  - @applet-request/shared@0.1.9
+
 ## 0.1.8
 
 ### Patch Changes

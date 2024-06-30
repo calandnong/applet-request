@@ -39,6 +39,7 @@
     "@applet-request/eslint-config-ts": "workspace:*",
     "@applet-request/meta-data": "workspace:*",
     "@applet-request/shared": "workspace:*",
+    "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.1",
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",

@@ -35,7 +35,7 @@ export interface TransformRequestConfig<Config> extends RequestConfig<Config> {
    */
   baseURL: string;
   /**
-   * 请求方法未拼接的url
+   * 请求方法已拼接的url
    */
   apiURL: string;
 }
