@@ -1,5 +1,16 @@
 # @applet-request/core
 
+## 1.0.0
+
+### Major Changes
+
+- feat: 更新 1.0.0 版本
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @applet-request/shared@1.0.0
+
 ## 0.1.11
 
 ### Patch Changes

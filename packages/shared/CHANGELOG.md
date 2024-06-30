@@ -1,5 +1,11 @@
 # @applet-request/shared
 
+## 1.0.0
+
+### Major Changes
+
+- feat: 更新 1.0.0 版本
+
 ## 0.1.10
 
 ### Patch Changes
