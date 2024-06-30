@@ -160,7 +160,7 @@ XHROtherConfig,
       }
 
       // 设置自定义请求头
-      function isFormData(val: any): val is FormData {
+      function isFormData(val: unknown): val is FormData {
         return typeof val !== 'undefined' && val instanceof FormData;
       }
 
