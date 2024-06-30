@@ -1,5 +1,47 @@
 # @applet-request/adapters
 
+## 0.1.14
+
+### Patch Changes
+
+- [`18eb287`](https://github.com/calandnong/applet-request/commit/18eb2870faad51c30c6754f601080d7b1e2034d8) Thanks [@calandnong](https://github.com/calandnong)! - feat: 底层增加异常兜底机制
+
+- [`18eb287`](https://github.com/calandnong/applet-request/commit/18eb2870faad51c30c6754f601080d7b1e2034d8) Thanks [@calandnong](https://github.com/calandnong)! - feat: 发布正式版
+
+- feat: 发布正式版
+
+- Updated dependencies [[`18eb287`](https://github.com/calandnong/applet-request/commit/18eb2870faad51c30c6754f601080d7b1e2034d8), [`4e396ca`](https://github.com/calandnong/applet-request/commit/4e396cafe58f8c27a1e1b0e2c07a55ccd7b61c39), [`18eb287`](https://github.com/calandnong/applet-request/commit/18eb2870faad51c30c6754f601080d7b1e2034d8), [`8518954`](https://github.com/calandnong/applet-request/commit/85189545d98c56887bb01cc4e256be8b9ffd2cd9)]:
+  - @applet-request/core@0.1.11
+
+## 0.1.14-beta.2
+
+### Patch Changes
+
+- feat: 底层增加异常兜底机制
+
+- Updated dependencies []:
+  - @applet-request/core@0.1.11-beta.2
+
+## 0.1.14-beta.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @applet-request/core@0.1.11-beta.1
+
+## 0.1.14-beta.0
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @applet-request/core@0.1.11-beta.0
+
+## 0.1.13
+
+### Patch Changes
+
+- feat: core 部分将@applet-request/shared 作为 external
+
 ## 0.1.12
 
 ### Patch Changes

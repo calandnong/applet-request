@@ -1,5 +1,6 @@
 import { Adapter } from '@applet-request/core';
 import type { RequestContext, MiddlewareNext, RequestConfig } from '@applet-request/core';
+import { BaseException } from '@applet-request/shared';
 
 /**
  * uni.downloadFile的其他请求配置
@@ -10,6 +11,12 @@ export type UniDownloadFileOtherConfig = Omit<UniApp.DownloadFileOption, 'url' |
  * uni.downloadFile的请求配置
  */
 export type UniDownloadFileConfig = RequestConfig<UniDownloadFileOtherConfig>;
+
+export class UniDownloadFileFailException extends BaseException {
+  constructor(message: string, raw?: unknown, options?: ErrorOptions | undefined) {
+    super(message, raw, options);
+  }
+}
 
 /**
  * uni.downloadFile的请求适配器
@@ -38,7 +45,7 @@ export class UniDownloadFileAdaptor extends Adapter<
           resolve(res);
         },
         fail(err) {
-          reject(err);
+          reject(new UniDownloadFileFailException('downloadFile fail', err));
         },
       });
     });

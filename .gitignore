@@ -3,3 +3,5 @@ node_modules
 node_modules/
 .temp
 *.log
+docs/.vitepress/cache/
+.vitepress/cache/
