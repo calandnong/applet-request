@@ -43,7 +43,7 @@ export interface RequestResponse<Response> extends CommonResponse {
  */
 export function request<Response = never>(options: UniRequestConfig) {
   return requestInstance.request<
-    Response extends never ? CommonResponse<Response> : RequestResponse<Response>
+    Response extends never ? CommonResponse : RequestResponse<Response>
   >(options);
 }
 ```
