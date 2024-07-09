@@ -32,8 +32,8 @@
     "url": "https://github.com/callmecalcal/applet-request"
   },
   "engines": {
-    "node": ">=16.13.1",
-    "pnpm": ">=6.32.20"
+    "node": "20.15.1",
+    "pnpm": "9.5.0"
   },
   "devDependencies": {
     "@algolia/client-search": "^4.9.1",
@@ -67,6 +67,7 @@
     "fast-glob": "^3.2.12",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.0",
+    "miniprogram-api-typings": "*",
     "rollup": "^3.20.2",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-esbuild": "^5.0.0",

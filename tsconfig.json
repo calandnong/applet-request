@@ -27,7 +27,8 @@
     },
     "types": [
       "@dcloudio/types",
-      "@types/node"
+      "@types/node",
+      "miniprogram-api-typings"
     ]
   },
   "include": [

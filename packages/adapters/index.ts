@@ -3,3 +3,4 @@ export * from './uni-uploadFile';
 export * from './uni-downloadFile';
 export * from './xhr';
 export * from './axios';
+export * from './wx-request';

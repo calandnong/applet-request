@@ -1,5 +1,11 @@
 # @applet-request/adapters
 
+## 1.0.1
+
+### Patch Changes
+
+- feat: 增加 wx.request 的 adapter
+
 ## 1.0.0
 
 ### Major Changes
